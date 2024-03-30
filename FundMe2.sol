@@ -36,10 +36,7 @@ contract FundMe {
         isFunder[msg.sender] = true;
     }
     
-    function getVersion() public pure returns (uint256){
-        return 0; //Chainlink integration is removed
-    }
-    
+        
     modifier onlyOwner {
         if (msg.sender != i_owner) revert NotOwner();
         _;
